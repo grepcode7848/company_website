@@ -1,0 +1,563 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GrepCodes - EdTech & IT Solutions</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap');
+        
+        body {
+            font-family: 'Inter', sans-serif;
+            scroll-behavior: smooth;
+        }
+        
+        .gradient-bg {
+            background: linear-gradient(135deg, #6B46C1 0%, #3182CE 100%);
+        }
+        
+        .card-hover:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
+        }
+        
+        .nav-link {
+            position: relative;
+        }
+        
+        .nav-link:after {
+            content: '';
+            position: absolute;
+            width: 0;
+            height: 2px;
+            bottom: -2px;
+            left: 0;
+            background-color: #6B46C1;
+            transition: width 0.3s ease;
+        }
+        
+        .nav-link:hover:after {
+            width: 100%;
+        }
+        
+        .animate-float {
+            animation: float 6s ease-in-out infinite;
+        }
+        
+        @keyframes float {
+            0% { transform: translateY(0px); }
+            50% { transform: translateY(-20px); }
+            100% { transform: translateY(0px); }
+        }
+    </style>
+</head>
+<body class="bg-gray-50">
+    <!-- Navigation -->
+    <nav class="bg-white shadow-sm fixed w-full z-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between h-16">
+                <div class="flex items-center">
+                    <div class="flex-shrink-0 flex items-center">
+                        <div class="w-10 h-10 rounded-full gradient-bg flex items-center justify-center text-white font-bold text-xl">GC</div>
+                        <span class="ml-3 text-xl font-semibold text-gray-900">Grep<span class="text-purple-600">Codes</span></span>
+                    </div>
+                </div>
+                <div class="hidden md:flex items-center space-x-8">
+                    <a href="#home" class="nav-link text-gray-700 hover:text-gray-900 px-3 py-2 text-sm font-medium">Home</a>
+                    <a href="#services" class="nav-link text-gray-700 hover:text-gray-900 px-3 py-2 text-sm font-medium">Services</a>
+                    <a href="#courses" class="nav-link text-gray-700 hover:text-gray-900 px-3 py-2 text-sm font-medium">Courses</a>
+                    <a href="#about" class="nav-link text-gray-700 hover:text-gray-900 px-3 py-2 text-sm font-medium">About</a>
+                    <a href="#contact" class="nav-link text-gray-700 hover:text-gray-900 px-3 py-2 text-sm font-medium">Contact</a>
+                </div>
+                <div class="flex items-center">
+                    <button class="bg-purple-600 hover:bg-purple-700 text-white px-4 py-2 rounded-md text-sm font-medium transition duration-300">
+                        Get Started
+                    </button>
+                    <button class="md:hidden ml-4 inline-flex items-center justify-center p-2 rounded-md text-gray-700">
+                        <i class="fas fa-bars"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="home" class="pt-24 pb-16 md:pt-32 md:pb-24">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="lg:grid lg:grid-cols-2 lg:gap-12 items-center">
+                <div class="mb-12 lg:mb-0">
+                    <h1 class="text-4xl md:text-5xl font-bold text-gray-900 leading-tight mb-6">
+                        Transforming Education <br> 
+                        <span class="text-purple-600">Through Technology</span>
+                    </h1>
+                    <p class="text-lg text-gray-600 mb-8 max-w-lg">
+                        GrepCodes bridges the gap between education and technology with cutting-edge IT services, software development, and cloud solutions tailored for the modern learner.
+                    </p>
+                    <div class="flex flex-col sm:flex-row space-y-4 sm:space-y-0 sm:space-x-4">
+                        <button class="bg-purple-600 hover:bg-purple-700 text-white px-6 py-3 rounded-md text-sm font-medium transition duration-300">
+                            Explore Courses
+                        </button>
+                        <button class="border border-gray-300 hover:border-purple-500 text-gray-700 hover:text-purple-600 px-6 py-3 rounded-md text-sm font-medium transition duration-300 flex items-center justify-center">
+                            <i class="fas fa-play-circle mr-2"></i> Watch Demo
+                        </button>
+                    </div>
+                </div>
+                <div class="relative">
+                    <div class="gradient-bg rounded-2xl p-1 animate-float">
+                        <img src="https://images.unsplash.com/photo-1551288049-bebda4e38f71?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80" 
+                             alt="EdTech Illustration" 
+                             class="rounded-2xl shadow-xl">
+                    </div>
+                    <div class="absolute -bottom-6 -left-6 bg-white p-4 rounded-xl shadow-lg hidden md:block">
+                        <div class="flex items-center">
+                            <div class="bg-yellow-100 p-2 rounded-full">
+                                <i class="fas fa-graduation-cap text-yellow-500"></i>
+                            </div>
+                            <div class="ml-3">
+                                <p class="text-xs text-gray-500">Students Enrolled</p>
+                                <p class="font-bold">25,000+</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="absolute -top-6 -right-6 bg-white p-4 rounded-xl shadow-lg hidden md:block">
+                        <div class="flex items-center">
+                            <div class="bg-blue-100 p-2 rounded-full">
+                                <i class="fas fa-cloud text-blue-500"></i>
+                            </div>
+                            <div class="ml-3">
+                                <p class="text-xs text-gray-500">Cloud Projects</p>
+                                <p class="font-bold">500+</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Trusted By Section -->
+    <section class="py-12 bg-gray-100">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <p class="text-center text-gray-500 mb-8">Trusted by innovative companies worldwide</p>
+            <div class="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-6 gap-8 items-center">
+                <img src="https://via.placeholder.com/150x60?text=Microsoft" alt="Microsoft" class="h-8 opacity-60 hover:opacity-100 transition duration-300">
+                <img src="https://via.placeholder.com/150x60?text=Google" alt="Google" class="h-8 opacity-60 hover:opacity-100 transition duration-300">
+                <img src="https://via.placeholder.com/150x60?text=Amazon" alt="Amazon" class="h-8 opacity-60 hover:opacity-100 transition duration-300">
+                <img src="https://via.placeholder.com/150x60?text=IBM" alt="IBM" class="h-8 opacity-60 hover:opacity-100 transition duration-300">
+                <img src="https://via.placeholder.com/150x60?text=Oracle" alt="Oracle" class="h-8 opacity-60 hover:opacity-100 transition duration-300">
+                <img src="https://via.placeholder.com/150x60?text=Intel" alt="Intel" class="h-8 opacity-60 hover:opacity-100 transition duration-300">
+            </div>
+        </div>
+    </section>
+
+    <!-- Services Section -->
+    <section id="services" class="py-20">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16">
+                <span class="text-purple-600 font-semibold">OUR SERVICES</span>
+                <h2 class="text-3xl md:text-4xl font-bold text-gray-900 mt-2 mb-4">Comprehensive Tech Solutions</h2>
+                <p class="text-gray-600 max-w-2xl mx-auto">
+                    We offer a complete suite of services to empower your educational journey and business transformation.
+                </p>
+            </div>
+            
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <!-- Service 1 -->
+                <div class="bg-white rounded-xl shadow-md overflow-hidden card-hover transition duration-300">
+                    <div class="p-6">
+                        <div class="bg-purple-100 w-12 h-12 rounded-full flex items-center justify-center mb-4">
+                            <i class="fas fa-laptop-code text-purple-600 text-xl"></i>
+                        </div>
+                        <h3 class="text-xl font-semibold text-gray-900 mb-2">EdTech Development</h3>
+                        <p class="text-gray-600 mb-4">
+                            Custom learning platforms, LMS integration, and interactive educational applications tailored to your needs.
+                        </p>
+                        <a href="#" class="text-purple-600 font-medium inline-flex items-center">
+                            Learn more <i class="fas fa-arrow-right ml-2"></i>
+                        </a>
+                    </div>
+                </div>
+                
+                <!-- Service 2 -->
+                <div class="bg-white rounded-xl shadow-md overflow-hidden card-hover transition duration-300">
+                    <div class="p-6">
+                        <div class="bg-blue-100 w-12 h-12 rounded-full flex items-center justify-center mb-4">
+                            <i class="fas fa-cloud text-blue-600 text-xl"></i>
+                        </div>
+                        <h3 class="text-xl font-semibold text-gray-900 mb-2">Cloud Solutions</h3>
+                        <p class="text-gray-600 mb-4">
+                            Scalable cloud infrastructure, migration services, and managed cloud solutions for educational institutions.
+                        </p>
+                        <a href="#" class="text-blue-600 font-medium inline-flex items-center">
+                            Learn more <i class="fas fa-arrow-right ml-2"></i>
+                        </a>
+                    </div>
+                </div>
+                
+                <!-- Service 3 -->
+                <div class="bg-white rounded-xl shadow-md overflow-hidden card-hover transition duration-300">
+                    <div class="p-6">
+                        <div class="bg-green-100 w-12 h-12 rounded-full flex items-center justify-center mb-4">
+                            <i class="fas fa-code text-green-600 text-xl"></i>
+                        </div>
+                        <h3 class="text-xl font-semibold text-gray-900 mb-2">Custom Software</h3>
+                        <p class="text-gray-600 mb-4">
+                            Bespoke software solutions designed to streamline operations and enhance learning experiences.
+                        </p>
+                        <a href="#" class="text-green-600 font-medium inline-flex items-center">
+                            Learn more <i class="fas fa-arrow-right ml-2"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Courses Section -->
+    <section id="courses" class="py-20 bg-gray-100">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16">
+                <span class="text-purple-600 font-semibold">LEARNING PATHS</span>
+                <h2 class="text-3xl md:text-4xl font-bold text-gray-900 mt-2 mb-4">Master In-Demand Tech Skills</h2>
+                <p class="text-gray-600 max-w-2xl mx-auto">
+                    Our curated courses combine theoretical knowledge with practical, hands-on experience.
+                </p>
+            </div>
+            
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <!-- Course 1 -->
+                <div class="bg-white rounded-xl overflow-hidden shadow-md card-hover transition duration-300">
+                    <div class="relative">
+                        <img src="https://images.unsplash.com/photo-1551434678-e076c223a692?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80" 
+                             alt="Cloud Computing" 
+                             class="w-full h-48 object-cover">
+                        <div class="absolute top-4 right-4 bg-purple-600 text-white text-xs font-semibold px-3 py-1 rounded-full">
+                            Popular
+                        </div>
+                    </div>
+                    <div class="p-6">
+                        <div class="flex items-center mb-2">
+                            <span class="bg-blue-100 text-blue-800 text-xs font-medium px-2.5 py-0.5 rounded">Beginner</span>
+                            <span class="ml-2 text-gray-500 text-sm">32 Hours</span>
+                        </div>
+                        <h3 class="text-xl font-semibold text-gray-900 mb-2">Cloud Computing Fundamentals</h3>
+                        <p class="text-gray-600 mb-4">
+                            Master AWS, Azure, and GCP essentials with hands-on labs and real-world projects.
+                        </p>
+                        <div class="flex justify-between items-center">
+                            <div class="flex items-center">
+                                <i class="fas fa-star text-yellow-400"></i>
+                                <span class="ml-1 text-gray-700">4.9</span>
+                                <span class="mx-2 text-gray-300">|</span>
+                                <span class="text-gray-500">1.2k students</span>
+                            </div>
+                            <span class="font-bold text-gray-900">$199</span>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Course 2 -->
+                <div class="bg-white rounded-xl overflow-hidden shadow-md card-hover transition duration-300">
+                    <div class="relative">
+                        <img src="https://images.unsplash.com/photo-1547658719-da2b51169166?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1528&q=80" 
+                             alt="Full Stack Development" 
+                             class="w-full h-48 object-cover">
+                    </div>
+                    <div class="p-6">
+                        <div class="flex items-center mb-2">
+                            <span class="bg-purple-100 text-purple-800 text-xs font-medium px-2.5 py-0.5 rounded">Intermediate</span>
+                            <span class="ml-2 text-gray-500 text-sm">48 Hours</span>
+                        </div>
+                        <h3 class="text-xl font-semibold text-gray-900 mb-2">Full Stack Development</h3>
+                        <p class="text-gray-600 mb-4">
+                            Build complete web applications with React, Node.js, and modern database technologies.
+                        </p>
+                        <div class="flex justify-between items-center">
+                            <div class="flex items-center">
+                                <i class="fas fa-star text-yellow-400"></i>
+                                <span class="ml-1 text-gray-700">4.8</span>
+                                <span class="mx-2 text-gray-300">|</span>
+                                <span class="text-gray-500">890 students</span>
+                            </div>
+                            <span class="font-bold text-gray-900">$249</span>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Course 3 -->
+                <div class="bg-white rounded-xl overflow-hidden shadow-md card-hover transition duration-300">
+                    <div class="relative">
+                        <img src="https://images.unsplash.com/photo-1622675363311-3e1904dc1885?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80" 
+                             alt="Data Science" 
+                             class="w-full h-48 object-cover">
+                        <div class="absolute top-4 right-4 bg-green-600 text-white text-xs font-semibold px-3 py-1 rounded-full">
+                            New
+                        </div>
+                    </div>
+                    <div class="p-6">
+                        <div class="flex items-center mb-2">
+                            <span class="bg-yellow-100 text-yellow-800 text-xs font-medium px-2.5 py-0.5 rounded">Advanced</span>
+                            <span class="ml-2 text-gray-500 text-sm">64 Hours</span>
+                        </div>
+                        <h3 class="text-xl font-semibold text-gray-900 mb-2">Data Science & AI</h3>
+                        <p class="text-gray-600 mb-4">
+                            From Python basics to machine learning models and data visualization techniques.
+                        </p>
+                        <div class="flex justify-between items-center">
+                            <div class="flex items-center">
+                                <i class="fas fa-star text-yellow-400"></i>
+                                <span class="ml-1 text-gray-700">4.7</span>
+                                <span class="mx-2 text-gray-300">|</span>
+                                <span class="text-gray-500">650 students</span>
+                            </div>
+                            <span class="font-bold text-gray-900">$299</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="text-center mt-12">
+                <button class="border border-purple-600 text-purple-600 hover:bg-purple-600 hover:text-white px-6 py-3 rounded-md text-sm font-medium transition duration-300">
+                    View All Courses
+                </button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Stats Section -->
+    <section class="py-20 gradient-bg text-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-2 md:grid-cols-4 gap-8 text-center">
+                <div class="p-4">
+                    <div class="text-4xl md:text-5xl font-bold mb-2">25K+</div>
+                    <div class="text-purple-200">Students Trained</div>
+                </div>
+                <div class="p-4">
+                    <div class="text-4xl md:text-5xl font-bold mb-2">120+</div>
+                    <div class="text-purple-200">Expert Instructors</div>
+                </div>
+                <div class="p-4">
+                    <div class="text-4xl md:text-5xl font-bold mb-2">500+</div>
+                    <div class="text-purple-200">Cloud Projects</div>
+                </div>
+                <div class="p-4">
+                    <div class="text-4xl md:text-5xl font-bold mb-2">98%</div>
+                    <div class="text-purple-200">Satisfaction Rate</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimonials -->
+    <section class="py-20 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16">
+                <span class="text-purple-600 font-semibold">TESTIMONIALS</span>
+                <h2 class="text-3xl md:text-4xl font-bold text-gray-900 mt-2 mb-4">What Our Clients Say</h2>
+                <p class="text-gray-600 max-w-2xl mx-auto">
+                    Don't just take our word for it - hear from our students and clients.
+                </p>
+            </div>
+            
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+                <!-- Testimonial 1 -->
+                <div class="bg-gray-50 p-8 rounded-xl">
+                    <div class="flex items-center mb-6">
+                        <div class="flex-shrink-0">
+                            <img class="h-12 w-12 rounded-full" src="https://randomuser.me/api/portraits/women/44.jpg" alt="Sarah Johnson">
+                        </div>
+                        <div class="ml-4">
+                            <h4 class="text-lg font-semibold text-gray-900">Sarah Johnson</h4>
+                            <p class="text-gray-600">CTO, EduTech Solutions</p>
+                        </div>
+                    </div>
+                    <p class="text-gray-700 italic mb-6">
+                        "GrepCodes transformed our learning platform with their cloud expertise. The migration was seamless, and their team provided exceptional training for our staff."
+                    </p>
+                    <div class="flex">
+                        <i class="fas fa-star text-yellow-400"></i>
+                        <i class="fas fa-star text-yellow-400"></i>
+                        <i class="fas fa-star text-yellow-400"></i>
+                        <i class="fas fa-star text-yellow-400"></i>
+                        <i class="fas fa-star text-yellow-400"></i>
+                    </div>
+                </div>
+                
+                <!-- Testimonial 2 -->
+                <div class="bg-gray-50 p-8 rounded-xl">
+                    <div class="flex items-center mb-6">
+                        <div class="flex-shrink-0">
+                            <img class="h-12 w-12 rounded-full" src="https://randomuser.me/api/portraits/men/32.jpg" alt="Michael Chen">
+                        </div>
+                        <div class="ml-4">
+                            <h4 class="text-lg font-semibold text-gray-900">Michael Chen</h4>
+                            <p class="text-gray-600">Software Engineer</p>
+                        </div>
+                    </div>
+                    <p class="text-gray-700 italic mb-6">
+                        "The Full Stack Development course gave me the skills I needed to transition into a developer role. The hands-on projects were invaluable and directly applicable to real work scenarios."
+                    </p>
+                    <div class="flex">
+                        <i class="fas fa-star text-yellow-400"></i>
+                        <i class="fas fa-star text-yellow-400"></i>
+                        <i class="fas fa-star text-yellow-400"></i>
+                        <i class="fas fa-star text-yellow-400"></i>
+                        <i class="fas fa-star text-yellow-400"></i>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="py-20 bg-gray-900 text-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="lg:grid lg:grid-cols-2 lg:gap-12 items-center">
+                <div class="mb-12 lg:mb-0">
+                    <h2 class="text-3xl md:text-4xl font-bold mb-6">
+                        Ready to Transform <br>
+                        <span class="text-purple-400">Your Tech Journey?</span>
+                    </h2>
+                    <p class="text-gray-400 mb-8 max-w-lg">
+                        Whether you're looking to skill up your team or build innovative educational technology, we're here to help.
+                    </p>
+                    <div class="flex flex-col sm:flex-row space-y-4 sm:space-y-0 sm:space-x-4">
+                        <button class="bg-purple-600 hover:bg-purple-700 text-white px-6 py-3 rounded-md text-sm font-medium transition duration-300">
+                            Get Started
+                        </button>
+                        <button class="bg-transparent hover:bg-gray-800 border border-gray-700 text-white px-6 py-3 rounded-md text-sm font-medium transition duration-300">
+                            Contact Sales
+                        </button>
+                    </div>
+                </div>
+                <div class="relative">
+                    <img src="https://images.unsplash.com/photo-1522071820081-009f0129c71c?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80" 
+                         alt="Team working" 
+                         class="rounded-xl shadow-xl w-full">
+                    <div class="absolute -bottom-6 -left-6 bg-purple-600 p-4 rounded-xl shadow-lg hidden md:block">
+                        <div class="flex items-center">
+                            <div class="bg-white p-2 rounded-full">
+                                <i class="fas fa-headset text-purple-600"></i>
+                            </div>
+                            <div class="ml-3">
+                                <p class="text-xs text-purple-200">24/7 Support</p>
+                                <p class="font-bold text-white">Always Available</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer id="contact" class="bg-gray-800 text-white pt-16 pb-8">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12">
+                <div>
+                    <div class="flex items-center">
+                        <div class="w-10 h-10 rounded-full gradient-bg flex items-center justify-center text-white font-bold text-xl">GC</div>
+                        <span class="ml-3 text-xl font-semibold">Grep<span class="text-purple-400">Codes</span></span>
+                    </div>
+                    <p class="mt-4 text-gray-400">
+                        Bridging the gap between education and technology with innovative solutions.
+                    </p>
+                    <div class="flex space-x-4 mt-6">
+                        <a href="#" class="text-gray-400 hover:text-white">
+                            <i class="fab fa-twitter"></i>
+                        </a>
+                        <a href="#" class="text-gray-400 hover:text-white">
+                            <i class="fab fa-linkedin"></i>
+                        </a>
+                        <a href="#" class="text-gray-400 hover:text-white">
+                            <i class="fab fa-github"></i>
+                        </a>
+                        <a href="#" class="text-gray-400 hover:text-white">
+                            <i class="fab fa-youtube"></i>
+                        </a>
+                    </div>
+                </div>
+                
+                <div>
+                    <h3 class="text-lg font-semibold mb-4">Services</h3>
+                    <ul class="space-y-2">
+                        <li><a href="#" class="text-gray-400 hover:text-white">EdTech Development</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-white">Cloud Solutions</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-white">Custom Software</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-white">IT Consulting</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-white">Data Analytics</a></li>
+                    </ul>
+                </div>
+                
+                <div>
+                    <h3 class="text-lg font-semibold mb-4">Courses</h3>
+                    <ul class="space-y-2">
+                        <li><a href="#" class="text-gray-400 hover:text-white">Cloud Computing</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-white">Full Stack Development</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-white">Data Science</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-white">DevOps</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-white">Cybersecurity</a></li>
+                    </ul>
+                </div>
+                
+                <div>
+                    <h3 class="text-lg font-semibold mb-4">Contact Us</h3>
+                    <ul class="space-y-2">
+                        <li class="flex items-center text-gray-400">
+                            <i class="fas fa-map-marker-alt mr-3"></i> 123 Tech Street, Silicon Valley
+                        </li>
+                        <li class="flex items-center text-gray-400">
+                            <i class="fas fa-phone-alt mr-3"></i> +1 (555) 123-4567
+                        </li>
+                        <li class="flex items-center text-gray-400">
+                            <i class="fas fa-envelope mr-3"></i> hello@grepcodes.com
+                        </li>
+                    </ul>
+                    <div class="mt-6">
+                        <h4 class="text-sm font-semibold text-gray-400 mb-2">NEWSLETTER</h4>
+                        <div class="flex">
+                            <input type="email" placeholder="Your email" class="bg-gray-700 text-white px-4 py-2 rounded-l-md focus:outline-none focus:ring-2 focus:ring-purple-600 w-full">
+                            <button class="bg-purple-600 hover:bg-purple-700 px-4 py-2 rounded-r-md">
+                                <i class="fas fa-paper-plane"></i>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="border-t border-gray-700 mt-12 pt-8 flex flex-col md:flex-row justify-between items-center">
+                <p class="text-gray-400 text-sm mb-4 md:mb-0">
+                    &copy; 2023 GrepCodes. All rights reserved.
+                </p>
+                <div class="flex space-x-6">
+                    <a href="#" class="text-gray-400 hover:text-white text-sm">Privacy Policy</a>
+                    <a href="#" class="text-gray-400 hover:text-white text-sm">Terms of Service</a>
+                    <a href="#" class="text-gray-400 hover:text-white text-sm">Cookies</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Simple smooth scroll for navigation links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                
+                document.querySelector(this.getAttribute('href')).scrollIntoView({
+                    behavior: 'smooth'
+                });
+            });
+        });
+        
+        // Mobile menu toggle functionality would go here
+        // This is a placeholder for actual implementation
+        document.querySelector('.md\\:hidden').addEventListener('click', function() {
+            // This would toggle a mobile menu in a real implementation
+            alert('Mobile menu would open here in a complete implementation');
+        });
+    </script>
+</body>
+</html>
